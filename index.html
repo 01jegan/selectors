@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>selector</title>
+</head>
+<style>
+
+		::selection{
+		background:green;
+		color:#fff;
+		}
+		 .container{
+			margin:0 200px;
+			padding:30px;
+			background:#80808070;
+		}
+		h1{
+		 background:gray;
+		 text-align:center;
+		 color:lightgreen;
+		}
+		a:link {
+		  color: red;
+		}
+		a:visited {
+		  color: pink;
+		}
+		a:hover {
+		  color:white;
+		}
+		a:active {
+		  color: blue;
+		}
+		.link{
+		display:flex;
+		}
+		.link a{
+		padding-left:10px;
+		} 
+		.f-child p:first-child b{
+		  background:green;
+		  color:white;
+		}
+		.l-child p:last-child{
+			background:orange;
+			color:white;
+		}
+		<!-- div:nth-child(2) { -->
+		  <!-- background: red; -->
+		<!-- } -->
+		li:nth-child(1) {
+		  background: lightgreen;
+		}
+		:nth-child(3) {
+		  background:skyblue;
+		}
+		.line p::first-line{
+		color:pink;
+		}
+		.letter p:first-letter{
+		color:pink;
+		font-size:40px;
+		}
+		.before h2::after{
+		content:" ";
+		width:20px;
+		height:3px;
+		position:absolute;
+		bottom:0px;
+		font-size:25px;
+		background:red;
+		padding-left:10px;
+		}
+		
+		.before h2:before{
+		content:"good morning";
+		font-size:25px;
+		color:orange;
+		padding-right:10px;
+		}
+		.marker li::marker{
+			color:orange;
+			font-size:20px;
+		}
+		.pesudo-at p[class="jegan"]{
+			background:orange;
+			font-size:20px;
+			color:#fff;
+		}
+		.value [title~="flower"]{
+		border:5px solid orange;
+		}
+		input[type=email]{
+			width: 150px;
+		  display: block;
+		  margin-bottom: 10px;
+		  background-color: orange;
+		}
+		input[type=button]{
+			background:blue;
+}
+</style>
+<body>
+<section class="container">
+		<h1>link visible</h1>
+			<div class="link">
+				<h2><a href="www.redbus.com">unvisited link</a></h2>
+				<h2><a href="www.games.com">visited link</a></h2>
+				<h2><a href="www.google.com">hover link</a></h2>
+				<h2><a href="www.email.com">active link</a></h2>
+			</div>
+			
+		<h1>first-child</h1>
+			<div class='f-child'>
+				<p>This is <b>some text</b>.</p>
+				<p>This is some text.</p>
+				<p>This is some text.</p>
+				<p>This is some text.</p>
+			</div>
+			
+		<h1>last-child</h1>
+			<div class='l-child'>
+			  <p>This is some text.</p>
+			  <p>This is some text.</p>
+			  <p>This is some text.</p>
+			  <p>This is some text.</p>
+			</div>
+			
+		<h1>nth-child</h1>
+			<div>
+			  <p>This is some text.</p>
+			</div>
+
+			<div>
+			  <p>This is some text.</p>
+			</div>
+
+			<div>
+			  <p>This is some text.</p>
+			</div>
+			
+			<ul>
+			  <li>First list item</li>
+			  <li>Second list item</li>
+			  <li>Third list item</li>
+			  <li>Fourth list item</li>
+			  <li>Fifth list item</li>
+			</ul>
+			
+			<h1>first-line</h1>
+				<div class="line">
+					<p>You can use the first-line pseudo-element to add a special effect
+					 to the first line of a text. Some more text. And even more, and more, and more,
+					 and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+				</div>
+				
+		 <h1>first-letter</h1>
+			 <div class="letter"> 
+				<p>You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+			 </div>
+			 
+		 <h2>line & letter joined function use<h2>
+		 <h1>before & after</h1>
+			 <div class='before'>
+				<h2 style="position:relative; margin-left:10px; ">hello</h2>
+			 </div>
+			 
+			<h1>marker</h1>
+				 <div class="marker">
+					 <ul>
+					  <li>Coffee</li>
+					  <li>Tea</li>
+					  <li>Milk</li>
+					</ul>
+					<ol>
+					  <li>First</li>
+					  <li>Second</li>
+					  <li>Third</li>
+					</ol>
+				 </div>
+				 
+		 <h1>pesudo-Attributes attribute & value</h1>
+			 <div class="pesudo-at">
+				<p class="jegan">The links with a target attribute gets a yellow background</p>
+			 </div>
+			 
+		 <h1>pesudo-Attributes attribute & value</h1>
+			 <div class="value">
+				 <img src="post-thumbnail-01.jpg" title="flower" width="150" height="113">
+				<img src="post-thumbnail-01.jpg" title="flowers" width="224" height="162">
+				<img src="post-thumbnail-01.jpg" title="flower" width="200" height="208">
+			</div>
+			
+		<h1>styling forms</h1>
+			<div>
+				<form name="input" action="" method="get">
+				  Firstname:<input type="email" name="Name" value="Peter" size="20">
+				  Lastname:<input type="email" name="Name" value="Griffin" size="20">
+				  <input type="button" value="Example Button">
+				</form>
+			</div>
+</section>
+</body>
+</html>
